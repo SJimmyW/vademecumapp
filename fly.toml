@@ -1,0 +1,8 @@
+app = "vademecumapp"
+primary_region = "ams"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "3838"
