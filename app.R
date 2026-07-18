@@ -54,7 +54,7 @@
 ###' AI Collaboration: Developed with assistance from OpenAI ChatGPT (GPT-5.5).
 ###' Date:2026
 ##############################################################################
-stop("ESTE ES MI APP.R")
+#stop("ESTE ES MI APP.R")
 cat("===== APP =====\n")
 
   source("parte_1.R")  # source("global.R")
