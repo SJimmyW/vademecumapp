@@ -32,4 +32,5 @@ RUN mkdir -p /srv/shiny-server/app/logs && chown -R shiny:shiny /srv/shiny-serve
 EXPOSE 3838
 
 # Run shiny-server (image's default entrypoint runs shiny-server)
-CMD ["/usr/bin/shiny-server", "--no-daemon"]
+#CMD ["/usr/bin/shiny-server", "--no-daemon"]
+CMD ["R", "-e", "options(shiny.host='0.0.0.0'); shiny::runApp('/srv/shiny-server/app', port = as.integer(Sys.getenv('PORT', '3838')), launch.browser = FALSE)"]
