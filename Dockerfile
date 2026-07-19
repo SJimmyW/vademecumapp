@@ -23,7 +23,7 @@ COPY . /srv/shiny-server/app
 
 # Install R packages required by the app
 # Keep this list in sync with packages.R / manifest.json
-RUN R -e "install.packages(c('shiny','bslib','shinyWidgets','readxl','googlesheets4','dplyr','stringr','purrr','tidyr','DT','htmltools'), repos='https://cloud.r-project.org')"
+RUN R -e "install.packages(c('shiny','bslib','shinyWidgets','readxl','dplyr','stringr','purrr','tidyr','DT','htmltools'), repos='https://cloud.r-project.org')"
 
 # Ensure logs directory exists (logger writes logs/app.log)
 RUN mkdir -p /srv/shiny-server/app/logs && chown -R shiny:shiny /srv/shiny-server/app
