@@ -13,6 +13,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libfreetype6-dev \
     libpng-dev \
     libjpeg-dev \
+    libuv1 \
+    pkg-config \
+    
     && rm -rf /var/lib/apt/lists/*
 
 # Create app directory
